@@ -27,7 +27,7 @@ export default function rootReducer(state = [], action) {
     case VOTE:
       return voteSort(
         state.map(title =>
-          title.id === action.post ? { ...title, votes: action.votes } : title
+          title.id === action.postId ? { ...title, votes: action.votes } : title
         )
       )
 

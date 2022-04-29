@@ -2,7 +2,7 @@ import React from 'react'
 import './NewPost.css'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
-import { addPost } from '../actions/posts'
+import { sendPostAPI } from '../actions/posts'
 import PostForm from './PostForm'
 
 const NewPost = () => {
@@ -10,7 +10,7 @@ const NewPost = () => {
   const history = useHistory()
 
   const add = ({ title, description, body }) => {
-    dispatch(addPost(title, description, body))
+    dispatch(sendPostAPI(title, description, body))
     history.push('/')
   }
 

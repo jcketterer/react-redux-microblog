@@ -5,12 +5,16 @@ import {
   VOTE,
   ADD_COMMENT,
   REMOVE_COMMENT,
+  FETCH_POST,
 } from '../actions/types'
 
 export default function rootReducer(state = {}, action) {
   let p = state[action.postId]
 
   switch (action.type) {
+    case FETCH_POST:
+      return { ...state, [action.post.id]: action.post }
+
     case ADD_POST:
       return { ...state, [action.post.id]: { ...action.post, comments: [] } }
 
@@ -31,7 +35,7 @@ export default function rootReducer(state = {}, action) {
     case VOTE:
       return {
         ...state,
-        [action.postId]: { ...p, votes: action.vote },
+        [action.postId]: { ...p, votes: action.votes },
       }
 
     case ADD_COMMENT:

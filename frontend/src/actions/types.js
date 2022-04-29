@@ -5,4 +5,4 @@ export const ADD_COMMENT = 'ADD_COMMENT'
 export const REMOVE_COMMENT = 'REMOVE_COMMENT'
 export const VOTE = 'VOTE'
 export const FETCH_TITLES = 'FETCH_TITLES'
-// export const
+export const FETCH_POST = 'FETCH_POST'
