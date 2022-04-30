@@ -15,7 +15,7 @@ const PostDisplay = ({ submitVote, toggleEdit, deletePost, post }) => {
 
       <div className="PostDisplay-right">
         <div className="PostDisplay-edit-area">
-          <i className="fas fa-edit text-primary mr-2" onClick={toggleEdit} />
+          <i className="fas fa-edit text-primary mx-2" onClick={toggleEdit} />
           <i className="fas fa-times text-danger" onClick={deletePost} />
         </div>
         <div className="PostDisplay-vote">
